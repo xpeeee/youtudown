@@ -21,7 +21,7 @@ def fetch_video_links(video_url, result_dict):
 
 @app.route('/')
 def index():
-    return render('index.html')
+       return render_template('index.html') 
 
 @app.route('/get_video_links', methods=['POST'])
 def get_video_links():
