@@ -21,7 +21,7 @@ def fetch_video_links(video_url, result_dict):
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render('index.html')
 
 @app.route('/get_video_links', methods=['POST'])
 def get_video_links():
@@ -44,4 +44,4 @@ def get_video_links():
         return json.dumps({"error": "Failed to fetch video."}), 500
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5001)
+    app.run(debug=True, port=5000)
